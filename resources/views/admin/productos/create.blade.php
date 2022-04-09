@@ -1,0 +1,17 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<h2>Create produtos</h2>
+
+<form action="{{route('productos.store')}}" method="post" accept-charset="utf-8">
+	@csrf
+    <label for="nombre">Nombre</label>
+	<input type="text" name="nombre" placeholder="Producto">
+
+    <label for="precio">Precio</label>
+	<input type="text" name="precio" placeholder="Precio" >
+
+    <label for="impuesto">Impuesto</label>
+	<input type="text" name="impuesto" placeholder="Impuesto" >
+
+    <button type="submit" name="enviar">Agregar</button>
+</form>
